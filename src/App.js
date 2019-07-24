@@ -34,8 +34,8 @@ function App() {
           <button className="homeButtons__fieldGoal" onClick={() => homeScores(prevScore => prevScore + 3)}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick={() => awayScores(prevScore => prevScore + 7)}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick={() => awayScores(prevScore => prevScore + 3)}>Away Field Goal</button>
         </div>
       </section>
     </div>
