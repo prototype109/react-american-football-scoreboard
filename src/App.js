@@ -2,8 +2,8 @@
 import React, {useState} from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
-import Buttons from './Buttons';
-import Players from './Players';
+import Buttons from './components/Buttons';
+import Players from './components/Players';
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -33,7 +33,7 @@ function App() {
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{away}</div>
           </div> */}
-          
+
         </div>
         <BottomRow />
       </section>
