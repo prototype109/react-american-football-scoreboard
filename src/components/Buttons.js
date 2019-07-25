@@ -1,8 +1,17 @@
 import React from 'react';
 
 function Buttons(props){
-    const upperCaseSide = props.side.toUpperCase();
+    let upperCaseSide = capitalizeFirstChar();
     const score = (val) => {props.score(prevScore => prevScore + val)};
+
+    function capitalizeFirstChar(){
+        let teamArray = Array.from(props.side);
+        let firstChar = teamArray.shift();
+        firstChar = firstChar.toUpperCase();
+        teamArray.unshift(firstChar);
+
+        return teamArray.join('');
+    }
     //const fieldGoal = () => {props.score(prevScore => prevScore + 3)};
     return (<div className={props.side + "Buttons"}>
                 <button className={props.side + "Buttons__touchdown"} onClick={() => score(7)}>{upperCaseSide + " Touchdown"}</button>
